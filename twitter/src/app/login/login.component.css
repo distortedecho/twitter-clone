@@ -1,0 +1,79 @@
+#left{
+position: absolute;
+top: 0;
+left: 0;
+width: 50%;
+height: 100%;
+background-image: url(src/assets/twitter.svg);
+background-repeat: repeat;
+}
+#right{
+position: absolute;
+top: 0;
+right: 0;
+width: 50%;
+height: 100%;
+}
+#logo{
+position: relative;
+width: 10%;
+height: 10%;
+top: 20%;
+left: 15%; 
+background-image: url(src/assets/twitter-clean.svg);
+background-size: 100%;
+background-repeat: no-repeat;
+}
+.heading{
+position: relative;
+top: 20%;
+width: fit-content;
+display: table; /*firefox*/
+left: 16%;
+font-size: 3rem;
+letter-spacing: 0.2rem;
+color: black;
+}
+.subhead{
+position: relative;
+top: 30%;
+width: fit-content;
+display: table; /*firefox*/
+left: 16%;
+font-size: 2rem;
+color: black;
+}
+.btn1{
+position: relative;
+top: 32%;
+left: 16%;
+font-size: 1.5rem;
+width: 67%;
+height: 6%;
+border-radius: 1rem;
+}
+.btn2{
+position: relative;
+top: 34%;
+left: 16%;
+background-color: #ffffff;
+font-size: 1.5rem;
+color: #00acee;
+width: 67%;
+height: 6%;
+border-radius: 1rem;
+}
+#pop_up{
+position: absolute;
+width: 100%;
+left: 0%;
+top: 50%;
+}
+.myform{
+position: relative;
+left: 25%;   
+}
+input{
+display: block;
+margin: 1rem;
+}

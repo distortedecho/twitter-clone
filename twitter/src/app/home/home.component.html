@@ -1,0 +1,14 @@
+<div class="sm_hed">
+    &nbsp;&nbsp; <b>Home</b>
+    <hr>
+</div>
+<div class="center">
+    <form>
+        <input type="text" placeholder="What's happening?">
+        <input type="submit" value="Tweet">
+    </form>
+    <div class="prof_pic"></div>
+    <div class="content" *ngFor="let tweet of alltweets">
+        <p>{{tweet.Content}}</p>
+    </div>
+</div>
