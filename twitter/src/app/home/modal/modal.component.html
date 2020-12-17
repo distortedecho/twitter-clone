@@ -1,0 +1,22 @@
+<div class="overlay"></div>
+<div class="center">
+    <h2 mat-dialog-title>
+        <mat-dialog-actions>
+            <i mat-button mat-dialog-close class="fa fa-times" aria-hidden="true"></i>
+        </mat-dialog-actions>
+        <hr>
+    </h2>
+    <mat-dialog-content style="color: #4D4F5C;">
+        <b>{{data.Reciever}}</b> @{{data.Reciever}} . {{data.Date}} <br>
+        {{data.Content}} <br>
+        Replying to <a href="#">@{{data.Reciever}}</a>
+    </mat-dialog-content>
+    <b><hr class="joint"></b>
+    <mat-dialog-content>
+        <form [formGroup]='signupform' (ngSubmit)="PostData(signupform,data.Reciever,data.tweetno)">
+            <input type="text" formControlName="Reciever" placeholder="Tweet your reply">
+            <input type="submit" value="Tweet">
+        </form>
+        <br>
+    </mat-dialog-content>
+</div>

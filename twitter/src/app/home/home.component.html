@@ -9,6 +9,22 @@
     </form>
     <div class="prof_pic"></div>
     <div class="content" *ngFor="let tweet of alltweets">
-        <p>{{tweet.Content}}</p>
+        <div class="profile-pic"></div>
+        <div class="name">
+            <b>{{tweet.Username}}</b>
+            <span style="position: relative; left: 1rem;">@{{tweet.Username}} .</span>
+            <span style="position: relative;left: 2rem;font-size: 0.7rem;">{{tweet.CreatedAt}}</span>
+        </div>
+        <div class="contnt">
+            {{tweet.Content}}
+        </div>
+        <div class="like-comment">
+            <span (click)="openModal(tweet.Username,tweet.CreatedAt,tweet.Content, tweet.TweetNo)">
+            <i class="fa fa-comment-o" aria-hidden="true"></i> {{tweet.Comments.CommentCounter}}
+            </span>
+            <span style="position: relative;left: 1rem;top: 0.1rem;cursor: pointer;"(click)="like(tweet.Username, tweet.TweetNo)">
+                <i class="fa fa-heart-o" aria-hidden="true"></i> {{tweet.like.LikeCounter}}
+            </span>
+        </div>
     </div>
 </div>
