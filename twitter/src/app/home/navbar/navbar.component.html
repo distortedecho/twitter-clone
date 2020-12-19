@@ -1,0 +1,37 @@
+<div class="sidebar">
+    <div class="circles">
+        <div class="icon"></div>
+    </div>
+    <div class="circles">
+        <div class="icon2">
+            <i class="fa fa-home" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="circles">
+        <div class="icon2">
+            <i class="fa fa-hashtag" style="color: black;" aria-hidden="true"></i>    
+        </div>
+    </div>
+    <div class="circles">
+        <div class="icon2" (click)="updateNotif()">
+            <i class="fa fa-bell-o" style="color: black;" aria-hidden="true"></i>
+            <div class="count"><b>{{difference}}</b></div> 
+        </div>
+    </div>
+    <div class="circles">
+        <div class="icon2">
+            <i class="fa fa-user-o" style="color: black;" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+<div class="showall" [ngStyle]="{'display': display}">
+    <div class="heading"><b>Notifications</b></div>
+    <div class="subhead"><b>All</b></div>
+    <div class="underline2"></div>
+    <div class="allnotif" *ngFor="let notif of alldata">
+        <div class="content">
+            {{notif}}
+        </div>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+.sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 16.5%;
+    height: 100%;
+    background-color: #fff;
+}
+.circles{
+    position: relative;
+    top: 0.6rem;
+    left: 13rem;
+    border-radius: 80%;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #fff; /*#64b5f287*/
+}
+.icon{
+    position: relative;
+    background-image: url(src/assets/twitter-clean.svg);
+    background-size: 100%;
+    width: 70%;
+    height: 70%;
+    left: 0.6rem;
+    top: 0.5rem;
+    background-repeat: no-repeat;
+}
+.icon2{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    left: 0.6rem;
+    color: #03a9f4;
+    font-size: 2.5rem;
+    top: -0.4rem;
+}
+.circles:hover{
+    background-color: #64b5f287;
+}
+.count{
+    position: relative;
+    width: fit-content;
+    display: table;
+    top: -4.5rem;
+    font-size: 2rem;
+    left: 2rem;
+}
+.showall{
+    position: absolute;
+    left: 16.5%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+}
+.heading{
+    position: relative;
+    top: 0rem;
+    left: 2rem;
+    width: fit-content;
+    display: table;
+    font-size: 2rem;
+    color: black;
+}
+.subhead{
+    position: relative;
+    top: 1rem;
+    left: 9%;
+    color: #03a9f4;
+    font-size: 2rem;
+}
+.allnotif{
+    position: relative;
+    left: 6rem;
+    top: 2rem;
+    margin: 2rem;
+    font-size: 2rem;
+    width: fit-content;
+    display: table;
+}
+.underline2{
+    position: relative;
+    left: 0;
+    top: 1rem;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #03a9f4;
+}

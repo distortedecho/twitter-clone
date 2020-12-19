@@ -13,6 +13,7 @@ import { ModalComponent } from './modal/modal.component';
 export class HomeComponent implements OnInit {
 
 alltweets = [];
+var:string ="";
 reciever:string;
 tweetno:Number;
 constructor(private tweets: TweetService, private route:Router, public modal: MatDialog) {}
@@ -27,6 +28,22 @@ constructor(private tweets: TweetService, private route:Router, public modal: Ma
        console.log(data);
      }
    );
+    this.var = 'liked';
+   this.notify(Username, this.var);
+  }
+
+  notify(Username, Variable)
+  {
+    let data = {
+      Username : Username,
+      details : " "+Variable+" "+'your tweet.'
+    }
+    this.tweets.Notification(data)
+    .subscribe(
+      data=>{
+        console.log(data);
+      }
+    )
   }
 
 

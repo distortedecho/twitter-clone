@@ -12,6 +12,7 @@ import { TweetService } from '../tweet.service';
 export class ModalComponent implements OnInit {
   content:string="";
   reciever:string="";
+  var:string="";
   tweetno:Number;
   signupform:FormGroup;
   constructor(@Inject(MAT_DIALOG_DATA) public data:any, private frmbuilder : FormBuilder, private tweet : TweetService) 
@@ -27,14 +28,30 @@ export class ModalComponent implements OnInit {
        reciever : rec,
        tweetno : tweetno
     };
-    this.Comment(data);
+    this.Comment(data,rec);
   }
 
-  Comment(Data)
+  Comment(Data,Reciever)
   {
     this.tweet.CommentTweet(Data)
     .subscribe(
       data => {
+        console.log(data);
+      }
+    )
+    this.var = 'Commented on';
+    this.notify(Reciever, this.var);
+  }
+
+  notify(Username, Variable)
+  {
+    let data = {
+      Username : Username,
+      details : " "+Variable+" "+'your tweet.'
+    }
+    this.tweet.Notification(data)
+    .subscribe(
+      data=>{
         console.log(data);
       }
     )
