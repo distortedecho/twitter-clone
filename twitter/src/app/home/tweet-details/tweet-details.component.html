@@ -1,1 +1,22 @@
-<p>tweet-details works!</p>
+<div class="tweetdetails">
+    <div class="prof_pic"></div>
+    <div class="username">
+       <strong> @{{tweetinfo.Username}}</strong>&nbsp;&nbsp; {{tweetinfo.CreatedAt}}
+    </div>
+    <div class="user-tweet">{{tweetinfo.Content}}</div>
+    <div class="all_likes">
+        <i class="fa fa-heart-o" aria-hidden="true"></i> {{tweetinfo.like.LikeCounter}}
+    </div>
+    <hr>
+    <div class="comments" *ngFor="let info of tweetinfo.Comments.Username">
+        <div class="prof_pic2"></div>
+        <div class="list">
+            <strong>@{{info}}</strong>
+        </div>
+    </div>
+    <div class="com-con" *ngFor="let info of tweetinfo.Comments.Content">
+        <div class="list2">
+            {{info}}
+        </div>
+    </div>
+</div>

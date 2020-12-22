@@ -1,0 +1,65 @@
+.tweetdetails{
+    position: relative;
+    top: 7rem;
+    height: 30rem;
+    width: 39%;
+    left: 22rem;
+    background-color: #ffffff;
+}
+.username
+{
+    font-size: 2rem;
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    top: -3rem;
+    left: 6rem;
+}
+.user-tweet{
+    position: relative;
+    left: 1rem;
+    top: -2rem;
+    font-size: 3rem;
+}
+.prof_pic{
+    position: relative;
+    width: 8%;
+    border-radius: 4rem;
+    height: 12%;
+    background-image: url(src/assets/twitter.svg);
+    top: 0.5rem;
+    left: 1rem;
+}
+.prof_pic2{
+    position: relative;
+    width: 4%;
+    z-index: 2;
+    border-radius: 4rem;
+    height: 2rem;
+    top: 0.5rem;
+    left: 1rem;
+    background-image: url(src/assets/twitter.svg);
+}
+.all_likes
+{
+    position: relative;
+    top: -1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+}
+.list
+{
+    position: relative;
+    top: -2rem;
+    left: 4rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.list2{
+    position: relative;
+    top: -10rem;
+    left: 5rem;
+    margin-bottom: 5rem;
+    font-size: 1.2rem;
+}

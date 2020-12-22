@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TweetService } from './tweet.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -10,7 +10,7 @@ import { ModalComponent } from './modal/modal.component';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy{
 
 alltweets = [];
 var:string ="";
@@ -52,7 +52,6 @@ constructor(private tweets: TweetService, private route:Router, public modal: Ma
     let data = tweet;
     this.tweets.tweetdetails.next(data);
     this.route.navigate(['/Home/tweet/'+tweet.TweetNo]);
-    console.log(tweet);
   }
 
 
@@ -69,6 +68,9 @@ constructor(private tweets: TweetService, private route:Router, public modal: Ma
         this.alltweets = data.data;
       }
     );
+  }
+  ngOnDestroy(): void {
+
   }
   openModal(Reciever, Date, Content, tweetno)
   {
