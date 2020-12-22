@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,8 @@ export class TweetService {
   NotificationUrl = "http://localhost:8080/twitter/notification";
   ShowNotification = "http://localhost:8080/twitter/showNotif";
   UpdateNotification = "http://localhost:8080/twitter/updatenotif";
+
+  tweetdetails = new BehaviorSubject<any>(null);
 
   constructor(private Http: HttpClient) { }
   

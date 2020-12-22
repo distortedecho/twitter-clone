@@ -32,6 +32,7 @@ constructor(private tweets: TweetService, private route:Router, public modal: Ma
    this.notify(Username, this.var);
   }
 
+
   notify(Username, Variable)
   {
     let data = {
@@ -44,6 +45,14 @@ constructor(private tweets: TweetService, private route:Router, public modal: Ma
         console.log(data);
       }
     )
+  }
+
+  updateSubject(tweet)
+  {
+    let data = tweet;
+    this.tweets.tweetdetails.next(data);
+    this.route.navigate(['/Home/tweet/'+tweet.TweetNo]);
+    console.log(tweet);
   }
 
 

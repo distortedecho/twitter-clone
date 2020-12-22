@@ -10,13 +10,15 @@ import { TweetService } from './tweet.service';
 import { ModalComponent } from './modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TweetDetailsComponent } from './tweet-details/tweet-details.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ProfileComponent,
     ModalComponent,
-    NavbarComponent
+    NavbarComponent,
+    TweetDetailsComponent
   ],
   imports: [
     CommonModule,

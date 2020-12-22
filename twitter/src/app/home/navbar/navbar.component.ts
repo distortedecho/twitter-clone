@@ -38,15 +38,22 @@ export class NavbarComponent implements OnInit {
   updateNotif()
   {
     this.display = "block";
+    const x = Array.from(document.getElementsByClassName('center')as HTMLCollectionOf<HTMLElement>);
+    x[0].style.display = "none";
     let data = {
       current_no : this.update
     }
     this.difference = 0;
     this.tweets.UpdateNotif(data)
-    .subscribe(
-      data => {
-        console.log(data);
-      }
-    )
+    .subscribe()
   }
+
+  closeNotif()
+  {
+    this.display ="none";
+    const x = Array.from(document.getElementsByClassName('center')as HTMLCollectionOf<HTMLElement>);
+    x[0].style.display = "block";
+
+  }
+
 }

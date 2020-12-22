@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TweetDetailsComponent } from './tweet-details/tweet-details.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent
+      },
+      {
+        path: 'tweet/:id',
+        component: TweetDetailsComponent
       }
     ]
   }

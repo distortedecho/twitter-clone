@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("profile");
+   }
 
   ngOnInit(): void {
+    const x = Array.from(document.getElementsByClassName('center')as HTMLCollectionOf<HTMLElement>);
+    x[0].style.display = "none";
   }
 
 }

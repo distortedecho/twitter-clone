@@ -8,7 +8,7 @@
         <input type="submit" value="Tweet">
     </form>
     <div class="prof_pic"></div>
-    <div class="content" *ngFor="let tweet of alltweets">
+    <div class="content" *ngFor="let tweet of alltweets" (click)="updateSubject(tweet)">
         <div class="profile-pic"></div>
         <div class="name">
             <b>{{tweet.Username}}</b>
@@ -28,4 +28,5 @@
         </div>
     </div>
 </div>
+<router-outlet></router-outlet>
 <app-navbar></app-navbar>
