@@ -3,14 +3,14 @@
     <hr>
 </div>
 <div class="center">
-    <form>
-        <input type="text" placeholder="What's happening?">
+    <form [formGroup]='signupform' (ngSubmit)="PostData(signupform)">
+        <input type="text" formControlName="Content" placeholder="What's happening?">
         <input type="submit" value="Tweet">
     </form>
     <div class="prof_pic"></div>
-    <div class="content" *ngFor="let tweet of alltweets" (click)="updateSubject(tweet)">
+    <div class="content" *ngFor="let tweet of alltweets">
         <div class="profile-pic"></div>
-        <div class="name">
+        <div class="name" (click)="updateSubject(tweet)">
             <b>{{tweet.Username}}</b>
             <span style="position: relative; left: 1rem;">@{{tweet.Username}} .</span>
             <span style="position: relative;left: 2rem;font-size: 0.7rem;">{{tweet.CreatedAt}}</span>

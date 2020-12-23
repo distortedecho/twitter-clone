@@ -61,6 +61,8 @@ export class TweetDetailsComponent implements OnInit , OnDestroy
     {
       this.subscription.unsubscribe();
     }
+    const x = Array.from(document.getElementsByClassName('center') as HTMLCollectionOf<HTMLElement>);
+    x[0].style.display = "block";
   }
 }
 

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { TweetService } from './tweet.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,29 @@ alltweets = [];
 var:string ="";
 reciever:string;
 tweetno:Number;
-constructor(private tweets: TweetService, private route:Router, public modal: MatDialog) {}
+signupform:FormGroup;
+constructor(private tweets: TweetService, private route:Router, public modal: MatDialog, private frmbuilder : FormBuilder) {
+  this.signupform = frmbuilder.group({
+    Content : ['',Validators.required]
+  })
+}
+PostData(signupform)
+{
+  let data =
+  {
+    Content :signupform.value.Content
+  };
+  this.tweet(data);
+}
+  tweet(data)
+  {
+    this.tweets.Post_tweet(data)
+    .subscribe(
+      data =>{
+        console.log(data);
+      }
+    );
+  }
   like(Username, Tweetno){
     let data = {
       reciever : Username,

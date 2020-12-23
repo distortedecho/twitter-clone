@@ -7,6 +7,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 })
 export class TweetService {
   Url = "http://localhost:8080/twitter/showall";
+  sendtweet = "http://localhost:8080/twitter/tweet";
   LikeUrl = "http://localhost:8080/twitter/like";
   CommentUrl = "http://localhost:8080/twitter/comment";
   SingleUser = "http://localhost:8080/twitter/singleUser";
@@ -100,6 +101,19 @@ export class TweetService {
       headers : httpheader,
     };
     return this.Http.post(this.UpdateNotification,data,options);
+  }
+
+
+  Post_tweet(data):Observable<any>
+  {
+    let httpheader = new HttpHeaders({
+      'Content-type' : 'Application/json',
+      'Authorization' : 'Bearer'+" "+sessionStorage.getItem('key')
+    });
+    let options = {
+      headers : httpheader,
+    };
+    return this.Http.post(this.sendtweet,data,options);
   }
 
 }
