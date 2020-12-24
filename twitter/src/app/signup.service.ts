@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SignupService {
-  Url = 'http://localhost:8080/twitter/create';
-  LoginUrl = 'http://localhost:8080/twitter/login';
+  Url = 'https://twitter-apis.herokuapp.com/twitter/create';
+  LoginUrl = 'https://twitter-apis.herokuapp.com/twitter/login';
 
   constructor(private http : HttpClient){}
 

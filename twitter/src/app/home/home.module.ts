@@ -11,6 +11,8 @@ import { ModalComponent } from './modal/modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TweetDetailsComponent } from './tweet-details/tweet-details.component';
+import { LeftSidebarComponent } from './left-sidebar/left-sidebar.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { TweetDetailsComponent } from './tweet-details/tweet-details.component';
     ProfileComponent,
     ModalComponent,
     NavbarComponent,
-    TweetDetailsComponent
+    TweetDetailsComponent,
+    LeftSidebarComponent
   ],
   imports: [
     CommonModule,

@@ -1,19 +1,19 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TweetService {
-  Url = "http://localhost:8080/twitter/showall";
-  sendtweet = "http://localhost:8080/twitter/tweet";
-  LikeUrl = "http://localhost:8080/twitter/like";
-  CommentUrl = "http://localhost:8080/twitter/comment";
-  SingleUser = "http://localhost:8080/twitter/singleUser";
-  NotificationUrl = "http://localhost:8080/twitter/notification";
-  ShowNotification = "http://localhost:8080/twitter/showNotif";
-  UpdateNotification = "http://localhost:8080/twitter/updatenotif";
+  Url = "https://twitter-apis.herokuapp.com/twitter/showall";
+  sendtweet = "https://twitter-apis.herokuapp.com/twitter/tweet";
+  LikeUrl = "https://twitter-apis.herokuapp.com/twitter/like";
+  CommentUrl = "https://twitter-apis.herokuapp.com/twitter/comment";
+  SingleUser = "https://twitter-apis.herokuapp.com/twitter/singleUser";
+  NotificationUrl = "https://twitter-apis.herokuapp.com/twitter/notification";
+  ShowNotification = "https://twitter-apis.herokuapp.com/twitter/showNotif";
+  UpdateNotification = "https://twitter-apis.herokuapp.com/twitter/updatenotif";
 
   tweetdetails = new BehaviorSubject<any>(null);
 
