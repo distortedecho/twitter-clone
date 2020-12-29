@@ -84,3 +84,15 @@ input[type="submit"]{
     top: 1rem;
     left: 4rem;
 }
+@media only screen and (max-width:1600px){
+.center{
+    top: 5.2rem;
+    left: 16.8rem;}
+.sm_hed{
+    left: 16.8rem;}
+.prof_pic{
+    height: 33%;}
+.profile-pic{
+    width: 4%;
+    height: 19%;}
+}

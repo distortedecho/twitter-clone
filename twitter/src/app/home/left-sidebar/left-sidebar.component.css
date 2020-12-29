@@ -41,3 +41,15 @@ input[type="search"]{
     border-radius: 2rem;
     background-color: #e6ecf0;
 }
+@media only screen and (max-width:1600px){
+input[type="search"]{
+width: 58%;}
+.light_bg{
+    width: 58%;}
+}
+@media only screen and (max-width:1536px){
+.light_bg, input[type="search"]{
+width: 60%;}
+.left{
+left: 59.5%;}
+}

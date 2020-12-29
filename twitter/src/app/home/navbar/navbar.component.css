@@ -98,3 +98,16 @@
     font-size: 2.5rem;
     top: -3rem;
 }
+
+@media only screen and (max-width:1600px){
+.circles{
+top: 0.6rem;
+left: 11rem;}
+.heading, .subhead{
+    font-size: 1.5rem;}
+.allnotif{
+left: 2rem;
+font-size: 1.5rem;}
+.close{
+    font-size: 2rem;}
+} 
